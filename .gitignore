@@ -1,5 +1,5 @@
 ##ignore this file##
-/out/
+out
 
-/.idea/
+.idea
 *.iml
