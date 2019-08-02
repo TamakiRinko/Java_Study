@@ -40,7 +40,8 @@ public class LinkedList {
 //
 //        System.out.println(staff.contains("Nancy"));
 
-        test();
+//        test();
+        linkedListTest();
     }
 
     public static void test(){
@@ -64,5 +65,35 @@ public class LinkedList {
             aIter.add(bIter.next());    //越过add的这个
         }
         System.out.println(a);
+
+        //remove every second word from b
+        bIter = b.listIterator();
+        while(bIter.hasNext()){
+            bIter.next();
+            if(bIter.hasNext()){
+                bIter.next();
+                bIter.remove();
+            }
+        }
+        System.out.println(b);
+
+        a.removeAll(b); //从a中删除b
+        System.out.println(a);
+
+        a.addAll(2, b);
+        System.out.println(a);  //b中所有元素添加到从2开始的位置
+        a.set(0, "Hola");
+        System.out.println(a);
+
+    }
+
+    public static void linkedListTest(){
+        List<String> a = new java.util.LinkedList<>();
+        a.add("Dog");
+        a.add("Cat");
+        a.add("Mice");
+        a.add("Doug");
+        java.util.LinkedList<String> lst = new java.util.LinkedList<>(a);   //用a建立lst
+        System.out.println(lst);
     }
 }
