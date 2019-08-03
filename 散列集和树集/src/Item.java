@@ -1,6 +1,7 @@
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Item implements Comparable<Item> {
+public class Item implements Comparable<Item>, Comparator<Item> {
     //Item要与Item进行比较！！不可为Comparable<String>
     private String description;
     private int id;
@@ -32,6 +33,11 @@ public class Item implements Comparable<Item> {
      */
     public int hashCode() {
         return Objects.hash(description, id);
+    }
+
+    @Override
+    public int compare(Item o1, Item o2) {
+        return o1.getDescription().compareTo(o2.getDescription());
     }
 
     @Override

@@ -17,8 +17,10 @@ public class TreeSetTest {
         System.out.println(parts);
         System.out.println("");
 
-        //使用特定的比较器，Comparator静态方法，按name排序
-        NavigableSet<Item> sortByDescription = new TreeSet<>(Comparator.comparing(Item::getDescription));
+        //使用特定的比较器，Comparator静态方法，按name排序；或实现Comparator接口，使用比较器；或使用lambda表达式
+//        NavigableSet<Item> sortByDescription = new TreeSet<>(Comparator.comparing(Item::getDescription));
+//        NavigableSet<Item> sortByDescription = new TreeSet<>(new Item());
+        NavigableSet<Item> sortByDescription = new TreeSet<>((o1, o2)->{return o1.getDescription().compareTo(o2.getDescription());});
         sortByDescription.addAll(parts);
         System.out.println(sortByDescription);
 //        iter = sortByDescription.iterator();
