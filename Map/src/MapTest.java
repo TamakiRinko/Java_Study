@@ -18,18 +18,35 @@ public class MapTest {
         // 456-62-5527=Francesca Cruz, 567-24-2546=Harry Hacker}
         System.out.println(staff.toString());
 
-        staff.remove("567-24-2546");
-        staff.replace("456-62-5527", new Employee("Francesca Hiller"));
-        System.out.println(staff.get("157-62-7935"));
+//        staff.remove("567-24-2546");
+//        staff.replace("456-62-5527", new Employee("Francesca Hiller"));
+//        System.out.println(staff.get("157-62-7935"));
         //getOrDefault，有默认值返回
         System.out.println(staff.getOrDefault("157-62-1234", new Employee("None")));
+
+        //以下迭代顺序不是添加顺序！添加顺序的是LinkedHashSet/Map
         //迭代遍历
         staff.forEach((String k, Employee v)->{
             System.out.println("key = " + k + ", value = " + v);
         });
         System.out.println("");
+        //第二种迭代方式，原本最高效，现已被上一种取代
+        //Entry为Map内部接口！
+        for(Map.Entry<String, Employee> entry: staff.entrySet()){
+            String k = entry.getKey();
+            Employee v = entry.getValue();
+            System.out.println("key = " + k + ", value = " + v);
+        }
+        System.out.println("");
+        //也即可以如下表示
+        Set<Map.Entry<String, Employee>> entries = staff.entrySet();
+        for(Map.Entry<String, Employee> entry: entries){
+            String k = entry.getKey();
+            Employee v = entry.getValue();
+            System.out.println("key = " + k + ", value = " + v);
+        }
 
-        TreeMapTest();
+//        TreeMapTest();
     }
 
     public static void TreeMapTest(){
@@ -47,6 +64,7 @@ public class MapTest {
         System.out.println("");
 
         //分别输出每个键即其对应的值！也按照键的排列顺序
+        //keySet扩展了Collection接口，可以向使用集合一样使用keySet
         Set<String> keyset = treeMap.keySet();
         for(String key:keyset){
             System.out.println(key);
