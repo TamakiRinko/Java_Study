@@ -1,6 +1,6 @@
 # Java_Study
 
-## 于`2019年7月初`开始自学Java，存放代码便于回顾与交流
+## 于`2019年7月初`开始自学Java，方式为：[尚学堂Java300集](https://www.bilibili.com/video/av59814573) + [Java核心技术(卷Ⅰ)](https://book.douban.com/subject/26880667/)。存放代码便于回顾复习与交流
 
 ## **进度：**
 
@@ -17,3 +17,7 @@ Queue结束，Map基本操作学习。
 &emsp;&emsp;[Map 综述（一）：彻头彻尾理解 HashMap](https://blog.csdn.net/justloveyou_/article/details/62893086)  
 &emsp;&emsp;[Map 综述（二）：彻头彻尾理解 LinkedHashMap](https://blog.csdn.net/justloveyou_/article/details/71713781)  
 **代码**：Map
+* 2019/8/6/1:15：  
+学习集合中的视图与包装器；  
+初步学习异常及如何抛出异常，如何创建异常类。  
+**代码**：ThrowsException
