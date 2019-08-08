@@ -28,3 +28,6 @@ Queue结束，Map基本操作学习。
 书本：学习在Try_Catch中抛出高级异常，分析堆栈轨迹，断言以及基本日志的使用。  
 Java300集：`P247，P248`，手写聊天室基础版以及使用OOP思想封装。  
 代码：**CatchException，ChattingRoom**
+* 2019/8/9：  
+Java300及：`P249~P252`，手写聊天室实现与他人群聊以及私聊。开始手写WebServer，学习反射基本含义。  
+代码：**ChattingRoom，WebServer**
