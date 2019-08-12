@@ -29,5 +29,8 @@ Queue结束，Map基本操作学习。
 Java300集：`P247，P248`，手写聊天室基础版以及使用OOP思想封装。  
 代码：**CatchException，ChattingRoom**
 * 2019/8/9：  
-Java300及：`P249~P252`，手写聊天室实现与他人群聊以及私聊。开始手写WebServer，学习反射基本含义。  
+Java300集：`P249~P252`，手写聊天室实现与他人群聊以及私聊。开始手写WebServer，学习反射基本含义。  
 代码：**ChattingRoom，WebServer**
+* 2019/8/12：  
+Java300集：`P253~P256`，学习如何解析xml，学习如何解析webxml并反射webxml形成类，为后续网页查找做铺垫。  
+代码：**WebServer**
